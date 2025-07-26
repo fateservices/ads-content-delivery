@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>AdSterra Banner</title>
   <style>
     body {
       margin: 0;
@@ -10,18 +9,32 @@
       overflow: hidden;
       background: transparent;
     }
+    .content-wrapper {
+      width: 728px;
+      height: 90px;
+      position: relative;
+    }
   </style>
 </head>
 <body>
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'b5359204bfdf3c8d817d715fb2e50420',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/b5359204bfdf3c8d817d715fb2e50420/invoke.js"></script>
+  <div class="content-wrapper" id="content-wrapper"></div>
+  <script>
+    var configVar = 'cfg_' + Math.random().toString(36).substring(2, 8);
+    window[configVar] = {
+      'key' : 'b5359204bfdf3c8d817d715fb2e50420',
+      'format' : 'iframe',
+      'height' : 90,
+      'width' : 728,
+      'params' : {}
+    };
+
+    (function() {
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = '//www.highperformanceformat.com/b5359204bfdf3c8d817d715fb2e50420/invoke.js';
+      script.async = true;
+      document.getElementById('content-wrapper').appendChild(script);
+    })();
+  </script>
 </body>
 </html>
